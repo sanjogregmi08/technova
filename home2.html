@@ -7,8 +7,12 @@
     <title>Technonova</title>
     <link rel="stylesheet" href="home2style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+    <div class="loader">
+        <div></div>
+    </div>
     <section class="header">
         <nav>
             <a href=""index.html><img src="images/tec.png" alt=""> </a>
@@ -144,6 +148,16 @@
         function hidemenu(){
             navlinks.style.right="-200px"
         }
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".header").fadeIn(1000);
+            $(".howto").fadeIn(1000);
+            $(".facilities").fadeIn(1000);
+            $(".testimonials").fadeIn(1000);
+            $(".footer").fadeIn(1000);
+        });
+
+        
     </script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset = "UTF-8">
+<title>Seller Registration</title>
+<link rel = "stylesheet" href="sr.css">
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+
+    
+</head>
+
+    <div class="container">
+        <div class= "title">Seller Registration</div><br>
+        <p>Create an account by filling up the following information.</p>
+        <form id = "form" action="/"  method="get">
+            <div class="user-defined">
+                <div class="input-box" >
+                    <span class="details"> Full Name:</span>
+                    <input id="name"  type="text" placeholder="Enter your Full Name"  >
+                    
+                </div>
+                <div class="input-box" id ="phonenumber">
+                    <span class="details"> Phone Number:</span>
+                    <input id ="number1" type="text" placeholder="Enter your Number"  >
+                    <div id ="numbererror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Email:</span>
+                    <input id ="email" type="email" placeholder="Enter your Email"  >
+                    <div id ="emailerror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Address:</span>
+                    <input id="address" type="text" placeholder="Enter your Address" >
+                    <div id ="addresserror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Password:</span>
+                    <input id="password" type="password" placeholder="Enter your Password" >
+                    <div id ="passworderror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Confirm Password:</span>
+                    <input  id = "confirmpassword"type="Password" placeholder="Retype your password" >
+                    <div id ="confirmpassworderror"></div>
+                </div>
+               
+
+            </div>
+            
+            <div id ="nameerror"></div>
+            <div class="button">
+               <input type="submit" value="Submit" >
+
+            </div>
+            <p>Already have an account? <a href="sl.html">Login</a></p>
+        </form>
+    </div>
+   
+</body>
+
+
+</html>

@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset = "UTF-8">
-<title>Registration</title>
-<link rel = "stylesheet" href="style.css">
+<meta charset = "UTF-8">
+<title>Seller Registration</title>
+<link rel = "stylesheet" href="sr.css">
 <meta name="viewport" content = "width=device-width, initial-scale=1.0">
-<script defer src="script.js"></script>
-<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
     
 </head>
-<div class="loader">
-    <div></div>
-</div>
+
     <div class="container">
-        <div class= "title">Registration</div><br>
+        <div class= "title">Seller Registration</div><br>
         <p>Create an account by filling up the following information.</p>
         <form id = "form" action="/"  method="get">
             <div class="user-defined">
@@ -30,13 +27,13 @@
                 </div>
                 <div class="input-box">
                     <span class="details"> Email:</span>
-                    <input id ="email" type="text" placeholder="Enter your  Email"  >
-                    <div id ="Emailerror"></div>
+                    <input id ="email" type="email" placeholder="Enter your Email"  >
+                    <div id ="emailerror"></div>
                 </div>
                 <div class="input-box">
-                    <span class="details"> Username:</span>
-                    <input id="username" type="text" placeholder="Enter your UserName" >
-                    <div id ="usernameerror"></div>
+                    <span class="details"> Address:</span>
+                    <input id="address" type="text" placeholder="Enter your Address" >
+                    <div id ="addresserror"></div>
                 </div>
                 <div class="input-box">
                     <span class="details"> Password:</span>
@@ -51,26 +48,7 @@
                
 
             </div>
-            <div class="gender-details">
-                <input type="radio" name="gender" id="dot-1">
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
-                <span class="gender-title">Gender</span>
-                <div class="category">
-                    <label for="dot-1">
-                        <span class="dot one"></span>
-                        <span class="gender">Male</span>
-                    </label>
-                    <label for="dot-2">
-                        <span class="dot two"></span>
-                        <span class="gender">Female</span>    
-                    </label>
-                    <label for="dot-3">
-                        <span class="dot three"></span>
-                         <span class="gender">prefer not to say</span>   
-                    </label>
-                </div>
-            </div>
+            
             <div id ="nameerror"></div>
             <div class="button">
                <input type="submit" value="Submit" >

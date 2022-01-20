@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    background-color: antiquewhite;
+    color:white;
+}
+*{
+    box-sizing: border-box;
+}
+h1{
+    color: steelblue;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    margin: auto;
+    text-align: center;
+    margin-top: 200px;
+}
+/*label{
+    display: inline-block;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+}*/
+
+.rate{
+    direction: rtl;
+}
+.rate label{
+    display: inline-block;
+    width: 120px;
+    position: relative;
+    cursor: pointer;
+}
+.rate input{
+    display: none;
+}
+.rate label:before{
+    content: "\2606";
+    position: absolute;
+    font-size: 120px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+.rate label:after{
+    content: "\2605";
+    position: absolute;
+    font-size: 120px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    color: orange;
+    opacity: 0;  
+}
+.rate label:hover:after,
+.rate label:hover ~ label:after,
+.rate input:checked ~ label:after{
+    opacity: 1;
+}

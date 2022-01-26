@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url(images/slbg.png);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .log{
+        width: 110%;
+        height: 400px;
+        border-radius: 10px;
+        float:right;
+        
+    }
+    .log:hover{
+        box-shadow: 2px 2px 4px rgba(0, 0, 0.3, 0.3);
+        transform: scale(1.00);
+    }
+    .row{
+        background: white;
+        width:100%;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px darkgrey;
+        max-width: 750px;
+        margin: 120px auto;
+    }
+    @media (max-width:900px) {
+        .log{
+            display: none;
+        }
+        
+    }
+    .btn1{
+        border: none;
+        outline: none;
+        height: 50px;
+        width: 100% ;
+        background-color: salmon;
+        color: white;
+        border-radius: 8px;
+        font-weight:bold ;
+        transition-duration: 0.4s;
+    }
+    .btn1:hover{
+        background: white;
+        border: 2px solid;
+        color: salmon;
+
+    }
+    p{
+        font-size: 15px;
+    }
+    a{
+        text-decoration: none;
+        color: salmon;
+        
+    }
+    h1{
+        color: white;
+        
+    }
+    h2{
+        color:salmon
+    }
+
+</style>
+<body>
+    <section class="form">
+        <div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/sl.png"  class ="log">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="text-center">Seller Login</h2>
+                    <p class="text-center">Enter the following details to proceed.</p>
+                    <form>
+                        <div class="form-row" >
+                            <div class="col-lg-12">
+                                <label>Fullname:</label>
+                                <input type="text" placeholder="Enter your email" class="form-control">
+                            </div>
+                        </div><br>
+                        <div class="form-row" >
+                            <div class="col-lg-12">
+                                <label>Password:</label>
+                                <input type="password" placeholder="Enter your password" class="form-control">
+                            </div>
+                        </div><br>
+                        <div class="form-row ">
+                            <div class="col-lg-5 m-auto">
+                                <button type="button" class="btn1">Login</button>
+                            </div><br>
+                        </div>
+                        <p class="text-center">Don't have an account? <a href="sellerreg.html">Sign up</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

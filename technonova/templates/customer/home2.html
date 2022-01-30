@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technonova</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home2style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div></div>
+    </div>
+    <section class="header">
+        <nav>
+            <a href=""index.html><img src="{% static 'images/tec.png' %}" alt=""> </a>
+               <div class="nav-links" id="navLinks" >
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+
+                   <ul>
+                       <li><a href="/login">Login</a></li>
+                   
+                   </ul>
+               </div>
+               <i class="fa fa-bars" onclick="showmenu()" ></i>
+
+        </nav>
+<div class="textbox">
+    <h1>Not just another E-commerce Website</h1>
+    <p>Technonova is an online shopping webpage for computers parts and hardware.
+        There are various types of hardware of every part of computer like graphics cards, SSD, keyboard, etc.
+        We can build our own pc in the webpage by selecting various types of parts which you would want in your computer.</p>
+        <a href="/login" class="hero-btn">Visit us to know more</a>
+    </div>
+    </section>
+    <!--- how to use-->
+<section class="howto">
+   
+    <div class="row">
+        
+        <div class="how-col">
+            <h1>How to use</h1>
+        <p>This website is simple to use and may be used by anyone with a basic understanding of the internet.
+            One can sign up for an account and use it to buy, sell, or even exchange your computer equipment. 
+            You can look at the products, leave feedback, review them, and contact us via various social networking platforms such as Facebook, Instagram, and WhatsApp.
+            The phone number will be provided as well.
+            Once you've logged in, you'll see your dashboard, your profile, which you can update at any time, and an inventory where you can store products from Technonova you want to buy at any time.
+        </p>
+            </div>
+        </div>
+
+
+</section>
+<!--Facilities-->
+<section class="facilities">
+    <h1> Our Services</h1>
+    <p>Our services include creating an couunt and being able to edit your profile, searchbar, dashboards, inventory where you can store your products, with an exchange option 
+        where you can exchange your products with new ones reviewing their condition, rating and feedback, second hand selling option and an option to build your pc online with any
+        gears you want.
+    </p>
+      <div class="row">
+          <div class="Facilities-col">
+              <img src="{% static 'images/build.jpg' %}">
+              <h3>Build your pc</h3>
+              <p>You can build your pc online with any gears you want.
+              </p>
+
+          </div>
+          <div class="Facilities-col">
+            <img src="{% static 'images/sell.png' %}">
+            <h3>Buyer and sellers</h3>
+            <p>After receiving permission from the administrator, one can buy and sell their computer products.
+            </p>
+            
+        </div>
+        <div class="Facilities-col">
+            <img src="{% static 'images/rate.png' %}">
+            <h3>Feedbacks</h3>
+            <p>Customers will be able to give feedback on the products that they purchase.
+            </p>
+            
+        </div>
+      </div>  
+
+</section>
+<!--- comments-->
+<section class="testimonials">
+    <h1> What Our Customers Say</h1>
+  
+    <p>Here are some of the comments we've received from our customers.</p>
+   <div class="row">
+    <div class="testimonials-col">
+        <img src="{% static 'images/seller.jpg' %}">
+        <div>
+            <p>The products arrived on time with no damage. Excellent!!
+            </p>
+            <h3> Rajal Shrestha</h3>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half" ></i>
+
+
+        </div>
+     </div>
+     <div class="testimonials-col">
+        <img src="{% static 'images/bibek.png' %}">
+        <div>
+            <p>I like the items I ordered and it works great!!
+
+            </p>
+            <h3> Bibek Dangol</h3>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half" ></i>
+
+        </div>
+     </div>
+    </div>
+</section>
+
+<section class="footer">
+    <h4>Contact us</h4>
+    <div class="icons">
+    <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" ></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" ></i></a>
+    <a href="https://web.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" ></i></a>
+    <a href="https://www.linkedin.com/signup" target="_blank"><i class="fa fa-linkedin"s></i>
+    </a>
+</div>
+<div>
+    <p>Feel free to leave feedback at <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fa fa-envelope-o" ></i></a><br>
+     Made with <i class="fa fa-heart-o"> </i> by team The Wrost Generation 
+     <br/>
+     Want To Sell Your Products <a href="/seller/register" class ="login_seller" style="color:black;text-decoration: none;">Login as seller </a>
+    </p>
+    </div>
+</section>
+    
+    <script>
+        var navlinks = document.getElementById("navLinks");
+        function showmenu(){
+            navlinks.style.right ="0";
+        }
+        function hidemenu(){
+            navlinks.style.right="-200px"
+        }
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".header").fadeIn(1000);
+            $(".howto").fadeIn(1000);
+            $(".facilities").fadeIn(1000);
+            $(".testimonials").fadeIn(1000);
+            $(".footer").fadeIn(1000);
+        });
+
+        
+    </script>
+</body>
+</html>

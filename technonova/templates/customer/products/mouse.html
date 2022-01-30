@@ -1,0 +1,90 @@
+{%extends 'customer/Dashboard.html' %}
+{% block content %}
+{% load static %}
+<title>Mouse </title>
+<link rel="stylesheet" href="{% static 'product.css' %}">
+<nav class="navbar navbar-expand-lg navbar-light" style='background:wheat;'>
+    <a class="navbar-brand active" href="/allproducts">All Products</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/mouse">Mouse</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/keyboard">Keyboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/motherboard">MotherBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/coolingfan">Cooling Fan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/processor">Processor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/casing">Casing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gpu">GPU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/powersupply">Power Supply</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ram">Ram</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/memory">Memory</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/storage">Storage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/moniter">Moniter</a>
+          </li>
+
+    </ul>
+    </div>
+  </nav>
+<section class="game-section ">
+
+    <h1> All available Products  </h1>
+    <div class="container-fluid game-col">
+        <div class="row">
+            {% for product in products %}
+            <!-- Images in card-->
+            <div class="col-lg-4 col-md-6 my-4">
+              <div class="card bg-dark" style="color: white">
+                    {% load static %}
+                    <img height="390px" src="{% static 'images/' %}{{product.image}}"/>
+                    <!--  Decoration details -->
+                    <div class="card-body">
+                        <b>Product ID:</b>  {{product.id}}<br />
+                        <b> Name:</b>  {{product.name}}<br />
+                        <b> Type:</b>  {{product.item}}<br />
+                        <b>Category:</b>     {{product.category}}<br/>
+                        <b>Brand:</b>     {{product.brand}}<br/>
+                        <b>Price: </b>   {{product.price}}<br />
+                        <form method="post" action="#">
+                            {% if request.session.customer_id %}
+                            <a class="btn btn-success ml-5 mt-3" href="/booking/booking/{{game.id}}"
+                               title="Book Now">Book Now</a>
+                            
+                            {% else %}
+                            <a class="btn btn-success ml-5 mt-3" href="/register" title="Register">Add To Cart </a>
+                            <p class="ml-5" > </p>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

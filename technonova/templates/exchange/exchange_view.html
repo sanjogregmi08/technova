@@ -1,0 +1,50 @@
+{% extends 'seller/Dashboard.html'%} 
+{% block content%}
+<div>
+    <a href='/exchange/exchange_view' class="btn btn-secondary" style="margin-top:20px;">Exchange Request Here  </a>
+    <a href='/exchange/refund_view' class="btn btn-primary" style="margin-top:20px; margin-left: 800px;">Refund Request Here</a>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 my-4">
+            <div class="card">
+                <div class="card-header"><h1>Exchange Request Received </h1> </div>
+                <div class="card-body">
+                    {% for exchange in exchanges %}
+                    <b> Customer Name :</b> {{exchange.name}}
+                    <br/>
+                    <b>Customer ID </b> {{exchange.phone}}
+                    <br/>
+                    <b>Type </b> {{exchange.type}}
+                    <br/>
+                    <b>Product ID </b> {{exchange.product_id}}
+                    <br/>
+                    <b>Date Of Purchased Made </b> {{exchange.date}}
+                    <br/>
+                    <b>Reason of Exchange </b>{{exchange.reason}}
+                    <br/>
+                    <b>Reason  Description</b>
+                    <br/>
+                    <p>{{exchange.subject}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        <div class="pagination d-flex justify-content-center">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {% if page > 1 %}
+                <button class="btn btn-secondary p-1" name="prev">Previous</button>
+                {% endif %}
+                <input class="text-center p-1" value="{{page}}" name="page" />
+                {% if pageItem == 4 %}
+                <button name="next" class="btn btn-secondary p-1">Next</button>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

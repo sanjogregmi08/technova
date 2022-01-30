@@ -1,0 +1,39 @@
+{%extends 'customer/Dashboard.html' %}
+{% block content %}
+{% load static %}
+<title>My cart </title>
+<link rel="stylesheet" href="{% static 'product.css' %}">
+
+
+<section class="game-section ">
+
+    <h1> My cart  </h1>
+    <div class="container-fluid game-col">
+        <a class="btn btn-info" href="/cart/checkout" style="color:green; text-decoration:none;"> <i class="fa fa-check-square" aria-hidden="true"></i> Check out </a>
+        <br/>
+        <br/>
+        <a class="btn btn-warning" href="/cart/deletecart" style="color:red; text-decoration:none;"><i class="fa fa-trash-o ml-2"></i> Clear Cart</a>
+        <div class="row">
+            {% for product in products %}
+            <!-- Images in card-->
+            <div class="col-lg-6 col-md-6 my-4 ">
+                <div class="card bg-dark" style="color: white">
+                    {% load static %}
+                    <img height="390px" src="{% static 'images/' %}{{product.image}}"/>
+                    <!--  Decoration details -->
+                    <div class="card-body">
+                        <b>Product ID:</b>  {{product.id}}<br />
+                        <b> Name:</b>  {{product.name}}<br />
+                        <b> Type:</b>  {{product.item}}<br />
+                        <b>Category:</b>     {{product.category}}<br/>
+                        <b>Brand:</b>     {{product.brand}}<br/>
+                        <b>Price: </b>   {{product.price}}<br />
+            
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

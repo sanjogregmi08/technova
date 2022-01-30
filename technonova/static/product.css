@@ -1,0 +1,22 @@
+.game-section{
+    width: 80%;
+    margin: auto;
+    text-align:center ;
+    padding-top: 100px;
+
+}
+.game-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom:5% ;
+    text-align: left;
+}
+
+.game-col img{
+    width: 100%;
+    border-radius:10px ;
+}
+.game-col  img:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}

@@ -1,0 +1,42 @@
+{%extends 'customer/Dashboard.html' %}
+{% block content %}
+{% load static %}
+    
+<link rel="stylesheet" href="{% static 'product.css' %}">
+<title>What new </title>
+<section class="game-section bg-light">
+    <h1> What New </h1>
+    <div class="container-fluid game-col">
+        <div class="row">
+            {% for product in products %}
+            <!-- Images in card-->
+            <div class="col-lg-4 col-md-6 my-4">
+                <div class="card">
+                    {% load static %}
+                    <img height="390px" src="{% static 'images/' %}{{product.image}}"/>
+                    <!--  Decoration details -->
+                    <div class="card-body">
+                        <b>Product ID:</b>  {{product.id}}<br />
+                        <b> Name:</b>  {{product.name}}<br />
+                        <b> Type:</b>  {{product.item}}<br />
+                        <b>Category:</b>     {{product.category}}<br/>
+                        <b>Brand:</b>     {{product.brand}}<br/>
+                        <b>Price: </b>   {{product.price}}<br />
+                        <form method="post" action="#">
+                            {% if request.session.customer_id %}
+                            <a class="btn btn-success ml-5 mt-3" href="/booking/booking/{{game.id}}"
+                               title="Book Now">Book Now</a>
+                            
+                            {% else %}
+                            <a class="btn btn-success ml-5 mt-3" href="/register" title="Register">Add To Cart </a>
+                            <p class="ml-5" > </p>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'seller/dashboard.html' %} 
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 my-4">
+            <div class="card">
+                <div class="card-header"><h1>Feedbacks Received </h1> </div>
+                <div class="card-body">
+                    {% for feedback in feedbacks %}
+                    <b> Sender Name :</b> {{feedback.name}}
+                    <br/>
+                    <b>Sender Phone Number </b> {{feedback.phone}}
+                    <br/>
+                    <b>Sender  email </b>{{feedback.email}}
+                    <br/>
+                    <b>feedback Type</b>{{feedback.type}}
+                    <br/>
+                    <b>feeback Description</b>
+                    <br/>
+                    <p>{{feedback.subject}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        <div class="pagination d-flex justify-content-center">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {% if page > 1 %}
+                <button class="btn btn-secondary p-1" name="prev">Previous</button>
+                {% endif %}
+                <input class="text-center p-1" value="{{page}}" name="page" />
+                {% if pageItem == 4 %}
+                <button name="next" class="btn btn-secondary p-1">Next</button>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

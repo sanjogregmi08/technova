@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset = "UTF-8">
+<title>Seller Registration</title>
+{% load static %}
+<link rel = "stylesheet" href="{% static 'sellerreg.css' %}">
+<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+
+    
+</head>
+
+    <div class="container">
+        <div class= "title">Seller Registration</div><br>
+        <p>Create an account by filling up the following information.</p>
+        <form id = "form" action="register"  method="POST">
+            {% csrf_token %}
+            <div class="user-defined">
+                <div class="input-box" >
+                    <span class="details"> Full Name:</span>
+                    <input id="name"  type="text" placeholder="Enter your Full Name" name='fullname' >
+                    
+                </div>
+                <div class="input-box" id ="phonenumber">
+                    <span class="details"> Phone Number:</span>
+                    <input id ="number1" type="text" placeholder="Enter your Number" name='phonenumber' >
+                    <div id ="numbererror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Email:</span>
+                    <input id ="email" type="email" placeholder="Enter your Email" name='email'  >
+                    <div id ="emailerror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Username:</span>
+                    <input id="address" type="text" placeholder="Enter your Username" name='username'  >
+                    <div id ="addresserror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Password:</span>
+                    <input id="password" type="password" placeholder="Enter your Password" name='password' >
+                    <div id ="passworderror"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Confirm Password:</span>
+                    <input  id = "confirmpassword"type="Password" placeholder="Retype your password" >
+                    <div id ="confirmpassworderror"></div>
+                </div>
+               
+
+            </div>
+            
+            <div id ="nameerror"></div>
+            <div class="button">
+               <input type="submit" value="Submit" >
+
+            </div>
+            <p>Already have an account? <a href="/seller/login">Login</a></p>
+        </form>
+    </div>
+   
+</body>
+
+
+</html>

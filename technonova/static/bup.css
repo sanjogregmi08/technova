@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+}
+.back{
+    background: url('images/bg.png');
+    background-size: cover;
+    width: 100%;
+}
+
+.row1{
+    
+    background: none;
+    width:100%;
+    border-radius: 10px;
+    margin-top:200px;
+    margin-left:200px;
+   
+}
+.buttons2{
+    padding:5px;
+    display:inline-block;
+}
+
+.btn1{
+    margin-left:50px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+    background-color: salmon;
+    color: transparent;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+.processor{
+    background-image: url('images/cpu.png');
+    background-size: cover;
+}
+.btn1:hover {
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+    font-weight:bold ;
+    
+}
+.btn1:hover a{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+    font-weight:bold ;
+   
+}
+
+.btn2{
+    margin-left:20px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+   
+    color: transparent;
+    
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.casing{
+    background-image: url('images/computer.png');
+    background-size: cover;
+}
+.btn2:hover{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}
+.btn3{
+    margin-left:20px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+  
+    color:transparent;
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.coolingfan{
+    background-image: url('images/fan.png');
+    background-size: cover;
+}
+.btn3:hover{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}
+.btn4{
+    margin-top: 10px;
+    margin-left:20px;
+    display:inline-block;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+    background-color: white;
+    color: transparent;
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.graphic{
+    background-image: url('images/graphics-card.png');
+    background-size: cover;
+}
+.btn4:hover{
+    transition: 0.78s;
+    color:red;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}
+.btn5{
+    margin-left:50px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+   
+    color: transparent;
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.ram{
+    background-image: url('images/ram-memory.png');
+    background-size: cover;
+}
+.btn5:hover{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}
+.btn6{
+    margin-left:20px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+    
+    color: transparent;
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.ssd{
+    background-image: url('images/hdd.png');
+    background-size: cover;
+}
+.btn6:hover{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}
+
+.btn7{
+    margin-left:20px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+    
+    color: transparent;
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.motherboard{
+    background-image: url('images/motherboard.png');
+    background-size: cover;
+}
+.btn7:hover{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}
+.btn8{
+    margin-left:20px;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 120px ;
+
+    color: transparent;
+    border-radius: 8px;
+    font-weight:bold ;
+    transition-duration: 0.4s;
+}
+.powersupply{
+    background-image: url('images/power-supply.png');
+    background-size: cover;
+}
+.btn8:hover{
+    transition: 0.78s;
+    background: white;
+    border: 2px solid;
+    color: salmon;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+{% extends 'customer/Dashboard.html' %}
+{% load static %}
+{% block content%}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <head>
+        <title>Build your pc</title>
+        <link rel = "stylesheet" href="{% static 'bup.css' %}">
+    </head>
+    <body>
+        <div class="back">
+
+        <div class="row1">
+ 
+            <div class="buttons2">
+                <a href='/build/processor'>  <button type="button"  class="btn1 processor">  Processors </button> </a> 
+                <a href='/build/coolingfan'><button type="button" class="btn2 coolingfan">Cooling fan</button></a>
+                <a href='/build/casing'>'<button type="button" class="btn3 casing "  >Casing</button></a>
+                <a href='/build/graphics'><button type="button" class="btn4 graphic">Graphics card</button><br><br></a>
+                <a href='build/ram'><button type="button" class="btn5 ram ">Ram</button></a>
+                <a href='/build/ssd'><button type="button" class="btn6 ssd ">SSD</button></a>
+                <a href='/build/motherboard'><button type="button" class="btn7 motherboard">Motherboard</button></a>
+                <a href='/build/powersupply'><button type="button" class="btn8 powersupply ">Power Supply</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

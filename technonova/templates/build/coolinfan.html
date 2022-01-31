@@ -1,0 +1,77 @@
+{%extends 'customer/Dashboard.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooling Fan</title>
+</head>
+<body>
+    
+    <section class="game-section ">
+        <div class="alert alert-success">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> The item has been added to your cart
+          </div>
+          <style>
+            .alert{
+              display:none;
+            }
+          </style>
+
+        <h1> Cooling Fan  </h1>
+        <div class="container-fluid game-col">
+            <div class="row">
+                {% for product in products %}
+                <!-- Images in card-->
+                <div class="col-lg-10 col-md-6 my-4">
+                  <div class="card bg-dark" style="color: white">
+                        {% load static %}
+                        <img height="390px" src="{% static 'images/' %}{{product.image}}"/>
+                        <!--  Decoration details -->
+                        <div class="card-body">
+                            <b>Product ID:</b>  {{product.id}}<br />
+                            <b> Name:</b>  {{product.name}}<br />
+                            <b> Type:</b>  {{product.item}}<br />
+                            <b>Category:</b>     {{product.category}}<br/>
+                            <b>Brand:</b>     {{product.brand}}<br/>
+                            <b>Price: </b>   {{product.price}}<br />
+                            <form action="/build/select" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <input type="text" name='id' value={{product.id}} style="display:none">
+                                <input type="text" name='name' value={{product.name}} style="display:none;"  >
+                                <input type="text" name='category' value={{product.category}} style="display:none;" >
+                                <input type="text" name='brand' value={{product.brand}} style="display:none;" >
+                                <input type="text" name='item' value={{product.item}} style="display:none;" >
+                                <input type="hidden" name='price' value={{product.price}}>
+                                <input type="text" name='image' value={{product.image}} style="display:none;" >
+                                
+                                
+                              <input class="btn btn-success ml-5 mt-3 button " type="submit" value="Select this " >
+                    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+       $('.button').click(function(){
+           $('.alert').show()
+       }) 
+   });
+   </script>
+{% endblock %}
+
+

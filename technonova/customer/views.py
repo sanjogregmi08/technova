@@ -163,3 +163,46 @@ def addtocart(request):
 @login_required(login_url='/login')
 def aboutus(request):
     return render(request,'customer/aboutus.html ')
+@login_required(login_url='/login')
+def build(request):
+    return render(request,'customer/build.html')
+def buildprocessor(request):
+    products=Products1.objects.filter(item="processor")
+    return render(request,'build/processor.html',{'products':products})
+def buildselect(request):
+    if request.method == "POST":
+        print(request.method)
+        print('hello')
+        form = cartForm(request.POST, request.FILES)
+        print(form)
+        if form.is_valid():
+            try:
+                print("valid")
+                form.save()
+            except:
+                print("validation failed")
+    else:
+        form = cartForm()
+        print("invalid") 
+    return redirect("/build")
+def buildcoolingfan(request):
+    products=Products1.objects.filter(item="cooling fan")
+    return render(request,'build/coolinfan.html',{'products':products})
+def buildcasing(request):
+    products =Products1.objects.filter(item='casing')
+    return render(request,'build/casing.html',{'products':products})
+def buildgraphics(request):
+    products =Products1.objects.filter(item='gpu')
+    return render(request,'build/graphics.html',{'products':products})
+def buildram(request):
+    products =Products1.objects.filter(item='ram')
+    return render(request,'build/ram.html',{'products':products})
+def buildssd(request):
+    products =Products1.objects.filter(item='memory')
+    return render(request,'build/ssd.html',{'products':products})
+def buildmotherboard(request):
+    products =Products1.objects.filter(item='motherboard')
+    return render(request,'build/motherboard.html',{'products':products})
+def buildpowersupply(request):
+    products =Products1.objects.filter(item='power supply')
+    return render(request,'build/powersupply.html',{'products':products})

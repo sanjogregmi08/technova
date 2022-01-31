@@ -35,7 +35,17 @@ urlpatterns = [
     path('asus',views.asus),
     path('addtocart',views.addtocart),
     path('logout', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
-    path('aboutus',views.aboutus)
+    path('aboutus',views.aboutus),
+    path('build',views.build),
+    path('build/processor',views.buildprocessor),
+    path('build/coolingfan',views.buildcoolingfan),
+    path('build/casing',views.buildcasing),
+    path('build/graphics',views.buildgraphics),
+    path('build/ram',views.buildram),
+    path('build/ssd',views.buildssd),
+    path('build/motherboard',views.buildmotherboard),
+    path('build/powersupply',views.buildpowersupply),
+    path('build/select',views.buildselect),
 
    
 ]

@@ -45,7 +45,7 @@ def registration(request):
         user = User.objects.create_user(first_name=fullname,
                                         last_name=phonenumber, email=email, username=username, password=password)
         user.save()
-        return redirect('login')
+        return redirect('/profile/myprofile')
     return render(request, 'customer/registration.html')
 
 @login_required(login_url='/login')

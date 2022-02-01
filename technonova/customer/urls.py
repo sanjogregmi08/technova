@@ -34,6 +34,7 @@ urlpatterns = [
     path('gigabyte',views.gigabyte),
     path('asus',views.asus),
     path('addtocart',views.addtocart),
+    path('addtocartmouse',views.addtocartmouse),
     path('logout', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
     path('aboutus',views.aboutus),
     path('build',views.build),

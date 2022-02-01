@@ -93,7 +93,7 @@ def gpu(request):
     return render(request,"customer/products/gpu.html",{'products':products})
 @login_required(login_url='/login')
 def powersupply(request):
-    products=Products1.objects.filter(item="powersupply")
+    products=Products1.objects.filter(item="power supply")
     return render(request,"customer/products/powersupply.html",{'products':products})
 @login_required(login_url='/login')
 def ram(request):
@@ -206,3 +206,19 @@ def buildmotherboard(request):
 def buildpowersupply(request):
     products =Products1.objects.filter(item='power supply')
     return render(request,'build/powersupply.html',{'products':products})
+def addtocartmouse(request):
+    if request.method == "POST":
+        print(request.method)
+        print('hello')
+        form = cartForm(request.POST, request.FILES)
+        print(form)
+        if form.is_valid():
+            try:
+                print("valid")
+                form.save()
+            except:
+                print("validation failed")
+    else:
+        form = cartForm()
+        print("invalid") 
+    return redirect("/mouse")

@@ -22,5 +22,6 @@ urlpatterns = [
     path('seller/',include('seller.urls')),
     path('cart/',include('cart.urls')),
     path('feedback/',include('feedback.urls')),
-    path('exchange/',include('exchange.urls'))
+    path('exchange/',include('exchange.urls')),
+    path('profile/',include('c_profile.urls'))
 ]

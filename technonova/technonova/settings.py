@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'seller',
     'cart',
     'feedback',
-    'exchange'
+    'exchange',
+    'c_profile'
 ]
 
 MIDDLEWARE = [

@@ -19,18 +19,18 @@
     <form  action="/login"method="post">
     {% csrf_token  %}
     <div class="txt_field">
-        <input type="text" name="username" required>
+        <input id="id_username" type="text" name="username" required>
         <span></span>
         <label>Username</label>
     </div>
     <div class="txt_field">
-    <input type="password" name="password" id="password" name="password" required>
+    <input id="id_password" type="password" name="password" id="password" name="password" required>
     <i class="bi bi-eye-slash" id="togglePassword"></i>
     <span></span>
     <label>Password</label>
     </div>
     <div class="pass">Forgot Password? </div>
-    <input type="submit" value="Login">
+    <input id ="id_login" type="submit" value="Login">
     <div class="signup_link">
         {% for message in messages  %}
         <p id =messages>{{message}}</p>

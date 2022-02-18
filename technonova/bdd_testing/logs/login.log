@@ -1,0 +1,11 @@
+02-Feb-22 11:59:54 -
+
+02-Feb-22 11:59:54 -====== WebDriver manager ======
+02-Feb-22 11:59:54 -Current google-chrome version is 98.0.4758
+02-Feb-22 11:59:54 -Get LATEST chromedriver version for 98.0.4758 google-chrome
+02-Feb-22 11:59:57 -Driver [C:\Users\mails\.wdm\drivers\chromedriver\win32\98.0.4758.48\chromedriver.exe] found in cache
+02-Feb-22 12:00:16 -**** Driver Initialised****
+02-Feb-22 12:00:19 -***** browser launched*****
+02-Feb-22 12:00:19 -***title matched**
+02-Feb-22 12:00:20 -***** browser closed ***** 
+***** browser closed ***** 
